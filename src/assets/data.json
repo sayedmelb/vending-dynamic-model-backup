@@ -1,0 +1,308 @@
+{
+   "widget":"listing",
+   "schema": {
+      "fields":[
+      {
+         "widget":"column",
+         "title":"Machine number",
+         "attributeid":"1",
+         "itemtype":"number",
+         "linkurl":"#",
+         "itemwidth":"12em",
+         "visible":true,
+         "fieldid":"id"
+      },
+      {
+         "widget":"column",
+         "title":"Latitude",
+         "attributeid":"2",
+         "itemtype":"string",
+         "linkurl":"#",
+         "itemwidth":"12em",
+         "visible":true,
+         "fieldid":"lat"
+      },
+      {
+         "widget":"column",
+         "title":"Longitude",
+         "attributeid":"3",
+         "itemtype":"string",
+         "linkurl":"#",
+         "itemwidth":"12em",
+         "visible":true,
+         "fieldid":"lng"
+      },
+       {
+         "widget":"column",
+         "title":"Status",
+         "attributeid":"4",
+         "itemtype":"image",
+         "linkurl":"#",
+         "itemwidth":"12em",
+         "visible":true,
+         "fieldid":"icon"
+      },
+        {
+         "widget":"column",
+         "title":"Description",
+         "attributeid":"5",
+         "itemtype":"string",
+         "linkurl":"#",
+         "itemwidth":"12em",
+         "visible":true,
+         "fieldid":"desc"
+      },
+       {
+         "widget":"column",
+         "title":"Last Service",
+         "attributeid":"5",
+         "itemtype":"date",
+         "linkurl":"#",
+         "itemwidth":"12em",
+         "visible":false,
+         "fieldid":"lastservice"
+      }
+   ]
+   },
+"products":[
+    {"lat": -27.81938219, "lng": 152.38865828, "status": 1, "description": "40-60 percent", "id": 1001,
+        "products" :[{
+            "id": 1,
+            "name": "Coke",
+            "price": 1.25,
+            "size": "375ml",
+            "quantity": 5,
+            "icon": "coke.jpeg"
+          }, {
+            "id": 2,
+            "name": "Diet Coke",
+            "price": "1.35",
+            "size": "250ml",
+            "quantity": 8,
+            "icon": "diet.jpeg"
+          },
+          {
+            "id": 3,
+            "name": "Fanta",
+            "price": "1.45",
+            "size": "375ml",
+            "quantity": 12,
+            "icon": "fanta.jpeg"
+          },
+          {
+            "id": 4,
+            "name": "Pepsi",
+            "price": "1.45",
+            "size": "375ml",
+            "quantity": 8,
+            "icon": "pepsi.jpeg"
+          }
+        ]
+        
+    },
+    {"lat": -27.84941128, "lng": 152.34522264, "status": 3, "description": "below 20 percent", "id": 9234,
+        "products" :[{
+            "id": 1,
+            "name": "Coke",
+            "price": 1.25,
+            "size": "375ml",
+            "quantity": 8,
+            "icon": "coke.jpeg"
+          }, {
+            "id": 2,
+            "name": "Diet Coke",
+            "price": "1.35",
+            "size": "250ml",
+            "quantity": 8,
+            "icon": "diet.jpeg"
+          },
+          {
+            "id": 3,
+            "name": "Fanta",
+            "price": "1.45",
+            "size": "375ml",
+            "quantity": 5,
+            "icon": "fanta.jpeg"
+          },
+          {
+            "id": 2,
+            "name": "Pepsi",
+            "price": "1.45",
+            "size": "375ml",
+            "quantity": 10,
+            "icon": "pepsi.jpeg"
+          }
+        ]
+    },
+    {"lat": -27.80097689, "lng": 152.35210023, "status": 3, "description": "below 20 percent", "id": 1456,
+        "products" :[{
+            "id": 1,
+            "name": "Coke",
+            "price": 1.25,
+            "size": "375ml",
+            "quantity": 4,
+            "icon": "coke.jpeg"
+          }, {
+            "id": 2,
+            "name": "Diet Coke",
+            "price": "1.25",
+            "size": "250ml",
+            "quantity": 4,
+            "icon": "diet.jpeg"
+          },
+          {
+            "id": 2,
+            "name": "Fanta",
+            "price": "1.45",
+            "size": "375ml",
+            "quantity": 3,
+            "icon": "fanta.jpeg"
+          },
+          {
+            "id": 2,
+            "name": "Pepsi",
+            "price": "1.45",
+            "size": "375ml",
+            "quantity": 5,
+            "icon": "pepsi.jpeg"
+          }
+        ]
+    },
+    {"lat": -27.84221097, "lng": 152.39325148, "status": 1, "description": "40-60 percent", "id": 1557,
+        "products" :[{
+            "id": 1,
+            "name": "Coke",
+            "price": 1.25,
+            "size": "375ml",
+            "quantity": 20,
+            "icon": "coke.jpeg"
+          }, {
+            "id": 2,
+            "name": "Diet Coke",
+            "price": "1.25",
+            "size": "250ml",
+            "quantity": 8,
+            "icon": "diet.jpeg"
+          },
+          {
+            "id": 3,
+            "name": "Fanta",
+            "price": "1.45",
+            "size": "375ml",
+            "quantity": 17,
+            "icon": "fanta.jpeg"
+          },
+          {
+            "id": 4,
+            "name": "Pepsi",
+            "price": "1.45",
+            "size": "375ml",
+            "quantity": 8,
+            "icon": "pepsi.jpeg"
+          }
+        ]
+    },
+    {"lat": -27.79315217, "lng": 152.38633075, "status": 0, "description": "above 80 percent", "id": 1588,
+        "products" :[{
+            "id": 1,
+            "name": "Coke",
+            "price": 1.25,
+            "size": "375ml",
+            "quantity": 20,
+            "icon": "coke.jpeg"
+          }, {
+            "id": 2,
+            "name": "Diet Coke",
+            "price": "1.25",
+            "size": "250ml",
+            "quantity": 20,
+            "icon": "diet.jpeg"
+          },
+          {
+            "id": 3,
+            "name": "Fanta",
+            "price": "1.45",
+            "size": "375ml",
+            "quantity": 17,
+            "icon": "fanta.jpeg"
+          },
+          {
+            "id": 4,
+            "name": "Pepsi",
+            "price": "1.45",
+            "size": "375ml",
+            "quantity": 17,
+            "icon": "pepsi.jpeg"
+          }
+        ]
+    },
+    {"lat": -27.81023481, "lng": 152.31865625, "status": 2, "description": "20-40 percent", "id": 1692,
+        "products" :[{
+            "id": 1,
+            "name": "Coke",
+            "price": 1.25,
+            "size": "375ml",
+            "quantity": 20,
+            "icon": "coke.jpeg"
+          }, {
+            "id": 2,
+            "name": "Diet Coke",
+            "price": "1.25",
+            "size": "250ml",
+            "quantity": 20,
+            "icon": "diet.jpeg"
+          },
+          {
+            "id": 3,
+            "name": "Fanta",
+            "price": "1.45",
+            "size": "375ml",
+            "quantity": 17,
+            "icon": "fanta.jpeg"
+          },
+          {
+            "id": 4,
+            "name": "Pepsi",
+            "price": "1.45",
+            "size": "375ml",
+            "quantity": 17,
+            "icon": "pepsi.jpeg"
+          }
+        ]
+    },
+    {"lat": -27.84134058, "lng": 152.35657281, "status": 0, "description": "above 80 percent", "id": 1696,
+        "products" :[{
+            "id": 1,
+            "name": "Coke",
+            "price": 1.25,
+            "size": "375ml",
+            "quantity": 20,
+            "icon": "coke.jpeg"
+          }, {
+            "id": 2,
+            "name": "Diet Coke",
+            "price": "1.25",
+            "size": "250ml",
+            "quantity": 20,
+            "icon": "diet.jpeg"
+          },
+          {
+            "id": 3,
+            "name": "Fanta",
+            "price": "1.45",
+            "size": "375ml",
+            "quantity": 17,
+            "icon": "fanta.jpeg"
+          },
+          {
+            "id": 4,
+            "name": "Pepsi",
+            "price": "1.45",
+            "size": "375ml",
+            "quantity": 17,
+            "icon": "pepsi.jpeg"
+          }
+        ]
+    }
+]
+}

@@ -1,0 +1,301 @@
+<nav-bar (navstatus)="OnNavBarClicked($event)" [headerInfo]="headerData"></nav-bar>
+<div class="container-fluid">
+	<ng-container *ngIf="navtoggle=='home' ">
+		<h1 *ngIf="headerData?.settings?.mainheading?.visible" class="header"
+			[ngStyle]="{'color': headerData.settings.mainheading.colorcode} ">
+			{{headerData?.mainheading}}
+		</h1>
+		<p>
+			{{headerData?.mainsummary}}
+		</p>
+		<img class="img-align"  src="{{imggithubpath}}vendingmc.png{{imgpathsuffice}}"  />
+
+		<div class="row light-shade">
+
+			<div class="col-12">
+
+				<h3> {{headerData?.detailssection?.heading}}</h3>
+			</div>
+
+			<div class="col-3 "> {{headerData?.detailssection?.legend1}} </div>
+			<div class="col-1 "> <img class="custom-icon" src="{{imggithubpath}}green.png{{imgpathsuffice}}" />
+      </div>
+				<div class="col-2  "></div>
+				<div class="col-3 "> {{headerData?.detailssection?.legend2}} </div>
+				<div class="col-1  ">
+					<img class="custom-icon"   src="{{imggithubpath}}violet.png{{imgpathsuffice}}"  /> </div>
+					<div class="col-2  "></div>
+
+
+					<div class="col-12">&nbsp;</div>
+
+					<div class="col-3 "> {{headerData?.detailssection?.legend3}}</div>
+					<div class="col-1 "> <img class="custom-icon"  src="{{imggithubpath}}warning.png{{imgpathsuffice}}"  />
+      </div>
+						<div class="col-2  "></div>
+						<div class="col-3 "> {{headerData?.detailssection?.legend4}} </div>
+						<div class="col-1  ">
+							<img class="custom-icon"  src="{{imggithubpath}}danger.png{{imgpathsuffice}}"  /> </div>
+							<div class="col-2  "></div>
+
+
+							<div class="col-12 pt-3">
+								<span [innerHtml]="headerData?.detailssection?.summary"></span>
+
+							</div>
+							<div class="col-12" style="background-color: orange;" *ngIf="errorStatus">
+								<h3>Important Message</h3>
+								<p>
+									<b>The site is experiencing following Problem<br>: {{errorMessage}}</b>
+								</p>
+							</div>
+							<div class="col-12 machine-section">
+								<h3> {{vendingData?.subtitle}}</h3>
+								<div class="row">
+									<div class="col-12  " *ngIf="!paymentSelected">
+										<div class="info-container">
+											{{vendingData?.mainsummary}}
+
+										</div>
+										<div class="row">
+											<div class="col-6">
+												<button class="btn-primary pad-right" (click)="onPaymentModeSelection('cash') ">{{vendingData?.cashtitle}}</button><button class="btn-success" (click)="onPaymentModeSelection('card') ">{{vendingData?.cardtitle}}</button>
+											</div>
+											<div class="col-6"></div>
+										</div>
+									</div>
+									<div class="col-12 " *ngIf="cashPayment">
+										<div class=" row info-container-cash">
+											<!-- <div class="col-12">
+												<h4>{{vendingData?.cashsectiontitle}}</h4>
+												<div class="row light-border-top">
+													<div class="col-3 " (click)="addToBalance($event,0.05)">
+														<div class="dv-button">5c</div>
+													</div>
+													<div class="col-3 " (click)="addToBalance($event,0.10)">
+														<div class="dv-button">10c</div>
+													</div>
+													<div class="col-3 " (click)="addToBalance($event,0.20)">
+														<div class="dv-button">20c</div>
+													</div>
+													<div class="col-3 " (click)="addToBalance($event,0.50)">
+														<div class="dv-button">50c</div>
+													</div>
+													<div class="col-3 " (click)="addToBalance($event,1.00)">
+														<div class="dv-button">$1</div>
+													</div>
+													<div class="col-3 " (click)="addToBalance($event,2.00)">
+														<div class="dv-button">$2</div>
+													</div>
+													<div class="col-3 " (click)="addToBalance($event,5.00)">
+														<div class="dv-button">$5</div>
+													</div>
+													<div class="col-3 " (click)="addToBalance($event,10.00)">
+														<div class="dv-button">$10</div>
+													</div>
+													<div class="col-3 " (click)="addToBalance($event,20.00)">
+														<div class="dv-button">$20</div>
+													</div>
+													<div class="col-3 " (click)="addToBalance($event,50.00)">
+														<div class="dv-button">$50</div>
+													</div>
+													<div class="col-3 " (click)="addToBalance($event,100.00)">
+														<div class="dv-button">$100</div>
+													</div>
+													<div class="col-3 " (click)="addToBalance($event,200.00)">
+														<div class="dv-button">$200</div>
+													</div>
+													<div class="col-3 " (click)="addToBalance($event,500.00)">
+														<div class="dv-button">$500</div>
+													</div>
+													<div class="col-6 ">
+														<div class="dv-amount">Amount
+															{{ balanceAmount |  currency:'USD':true:'2.2-4'}}</div>
+													</div>
+													<div class="col-3">
+														<button class="btn-success" (click)="onDone()">Done</button>
+													</div>
+													<div class="col-12 info-message" *ngIf="fundAvailable">Making your
+														cash available to machine wait...
+													</div>
+													<div class="col-12 info-message-success"
+														*ngIf="fundAvailablesuccess">All Good , start selecting your
+														item </div>
+												</div>
+											</div> -->
+											<!-- new section -->
+											<div class="col-12">
+												<h4>{{vendingData?.cashsectiontitle}}</h4>
+												<div class="row light-border-top">
+													<ng-container *ngFor="let item of vendingData.cashfields">
+														<div *ngIf="item.visible" class="col-3 "
+															(click)="addToBalance($event,item.value)">
+															<div class="dv-button">{{item.title}}
+															</div>
+														</div>
+													</ng-container>
+													<div class="col-6 ">
+														<div class="dv-amount">Amount
+															{{ balanceAmount |  currency:'USD':true:'2.2-4'}}</div>
+													</div>
+													<div class="col-3">
+														<button class="btn-success" (click)="onDone()">Done</button>
+													</div>
+													<div class="col-12 info-message" *ngIf="fundAvailable">
+														{{vendingData?.fundAvailable}} </div>
+													<div class="col-12 info-message-success"
+														*ngIf="fundAvailablesuccess">
+														{{vendingData?.fundAvailablesuccess}}</div>
+												</div>
+											</div>
+											<!-- end new section-->
+
+										</div>
+
+									</div>
+									<div class="col-12" *ngIf="cardPayment">
+										<div class=" row info-container-card">
+											<div class="col-12">
+												<h4>{{vendingData?.cardsectiontitle}}</h4>
+												<div class="row light-border-top">
+
+													<div *ngFor="let item of items; let i = index" class="col-3 "
+														(click)="addToBalanceCard($event,i)">
+														<div class="dv-button btn-success">{{i}}</div>
+													</div>
+													<div class="col-3 " (click)="addToBalanceCard($event,'.')">
+														<div class="dv-button">.</div>
+													</div>
+													<div class="col-3  " (click)="onClear($event,'clear')">
+														<div class="dv-button dv-raised btn-warning">Clear</div>
+													</div>
+
+													<div class="col-6">
+														<div class="dv-amount">Amount:
+															{{ balanceCardAmountstr |  currency:'USD':true:'2.2-4' }}
+														</div>
+													</div>
+													<div class="col-6 ">
+														<div class="dv-button dv-raised btn-primary"
+															(click)="onAuthorise()">Authorise</div>
+													</div>
+													<div class="col-12 info-message pl-2 pr-2" *ngIf="authorising">
+														authorising wait .... </div>
+													<div class="col-12 info-message-success pl-2 pr-2" *ngIf="approved">
+														Approved </div>
+
+												</div>
+											</div>
+
+										</div>
+
+									</div>
+									<div class="col-12" *ngIf="!showVendingMc">
+										<div class="row pr-2 pl-2">
+											<div class="col-12  info-message">
+												<h4>{{vendingData?.infomessage}}</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-12 pd-2" *ngIf="showVendingMc">
+										<h4>Vending Machine No: {{vendData.id}}</h4>
+										<div class="row">
+											<div class="col-12">
+												<div class="row info-machine ">
+													<div class="col-12" *ngFor="let item of vendData.products">
+														<img height="30px" class="icon-product"
+                      [ngClass]="{'coke': item.icon==='coke.jpeg', 'diet': item.icon==='diet.jpeg', 'fanta': item.icon==='fanta.jpeg', 'pepsi': item.icon==='pepsi.jpeg'  }"
+                      *ngFor="let cnt of item.productItems; " src="{{imggithubpath}}{{item.icon}}{{imgpathsuffice}}"  />
+                  </div>
+													</div>
+												</div>
+												<div class="col-6 ">
+													<div class="row info-container-cash">
+														<div *ngFor="let item of vendData.products; let i = index"
+															class="col-12 pb-2 pt-1"
+															(mouseenter)="onHoverProduct($event,item)"
+															(click)="calculateAndDispense($event,item,i)"><button
+                      class="btn btn-primary">{{item.name }} [ {{item.quantity}} ]</button></div>
+
+														<div class="col-12 light-border-top">Size : {{itemSize}}</div>
+														<div class="col-12">Prize : $ {{itemPrice}}</div>
+													</div>
+
+												</div>
+												<div class="col-6 ">
+													<div class="row info-container-cash" style="min-height: 100px;">
+														<div class="col-12 dv-amount-fund"> Available Fund :
+															{{this.totalAvailableFund |  currency:'USD':true:'2.2-4'}}
+														</div>
+
+														<div class="col-12"><button class="btn btn-primary" (click)="onComplete()">Return balance amount and
+                      end process</button> </div>
+														<div class="col-12 info-message" *ngIf="dispensing">Dispensing
+															please wait ...</div>
+														<div class="col-12 info-message-success" *ngIf="returnFundCard">
+															Returning
+															{{this.totalAvailableFund |  currency:'USD':true:'2.2-4'}}
+															fund to card ...</div>
+														<div class="col-12 info-message-success" *ngIf="returnFundCash">
+															Collect
+															{{this.totalAvailableFund |  currency:'USD':true:'2.2-4'}}
+															from machine coin/cash area ...</div>
+													</div>
+
+
+												</div>
+											</div>
+
+										</div>
+
+
+									</div>
+								</div>
+							</div>
+
+							<div class="row map-shade">
+								<div class="col-12">
+									<input class="mapSearch" placeholder="Filter by machine, status, desc.." autocomplete="off"
+          (keyup)="updateFilter($event)" />&nbsp;
+									<button type="button" class="btn btn-primary btn-gap" (click)="clearFilter($event)">Clear filter</button>
+								</div>
+								<div class="col-12">&nbsp;</div>
+								<div class="col-12">
+									<ngui-map class="margin-top mapsize" zoom="12.5" center="Thornton
+          Queensland , Australia" [fullscreenControl]="true" [fullscreenControlOptions]="{position: 'TOP_RIGHT'}">
+
+										<custom-marker *ngFor="let data of positions" (click)="clicked($event, data)"
+											(mouseenter)="onHover($event,data)" [position]="[data.lat, data.lng]"
+											(mapReady$)="onMapReady($event)"
+											(initialized$)="onCustomMarkerInit($event, data)">
+
+											<img class="custom-icon" [src]="data.icon" />
+          </custom-marker>
+											<polygon [editable]="true" [paths]="paths" [strokeColor]="'#FFC107'"
+												[strokeOpacity]="0.8" [strokeWeight]="2" [fillColor]="'#FFC107'"
+												[fillOpacity]="0.35"></polygon>
+
+											<info-window id="iw" [pixelOffset]="{ width: 0, height: 0 }"
+												[disableAutoPan]="true" [zIndex]="9999">
+												<div><span [innerHtml]="statusMessage"></span></div>
+											</info-window>
+
+
+
+									</ngui-map>
+
+								</div>
+								<div class="col-12">&nbsp;</div>
+
+							</div>
+
+
+	</ng-container>
+	<machine-listing *ngIf="navtoggle=='listing'" [listing]="positions" [listingHeaders]= "listingHeaders"></machine-listing>
+
+</div>
+<div style="height:1rem;">
+	&nbsp;
+</div>
+<nav-footer></nav-footer>

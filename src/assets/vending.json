@@ -1,0 +1,151 @@
+{
+   "widget":"menu",
+   "subtitle":"Vending Machine Section",
+   "mainsummary":"Select Vending machine from map below of Mall to start",
+  "cashtitle": "Cash payment",
+  "cardtitle": "Card payment",
+   "status":"active",
+   "description":"This is the vending area",
+   "id":802,
+   "cashsectiontitle": "Cash section",
+   "cardsectiontitle": "Card section",
+   "settings":{
+      "mainbar":{
+         "backgroundclass":"navbar-red",
+         "setbackground":false,
+         "visible": true
+      },
+      "mainheading":{
+         "visible":true,
+         "colorcode":"",
+         "iscolorcode":true
+      }
+   },
+   "fundAvailable" : "Making your cash available to machine wait...",
+   "fundAvailablesuccess": "All Good , start selecting your item ",
+   "infomessage": "Select Vending machine from map below of Mall to start",
+   
+   "cashfields":[
+      {
+         "widget":"menuitem",
+         "title":"5c",
+         "attributeid":"5c",
+         "itemtype":"number",
+         "itemwidth":"12em",
+         "visible":true,
+         "value": 0.05
+
+      },
+      {
+        "widget":"menuitem",
+         "title":"  10c",
+         "attributeid":"10c",
+         "itemtype":"number",
+         "itemwidth":"12em",
+         "visible":true,
+         "value": 0.10
+
+      },
+      {
+          "widget":"menuitem",
+         "title":"20c",
+         "attributeid":"20c",
+         "itemtype":"number",
+         "itemwidth":"12em",
+         "visible":true,
+         "value": 0.20
+
+      },
+       {
+          "widget":"menuitem",
+         "title":"50c",
+         "attributeid":"50c",
+         "itemtype":"number",
+         "itemwidth":"12em",
+         "visible":true,
+         "value": 0.50
+
+      },
+       {
+          "widget":"menuitem",
+         "title":"$1",
+         "attributeid":"$1",
+         "itemtype":"number",
+         "itemwidth":"12em",
+         "visible":true,
+         "value": 1.00
+      },
+      {
+          "widget":"menuitem",
+         "title":"$2",
+         "attributeid":"$2",
+         "itemtype":"number",
+         "itemwidth":"12em",
+         "visible":true,
+         "value": 2.00
+      },
+      {
+          "widget":"menuitem",
+         "title":"$5",
+         "attributeid":"$5",
+         "itemtype":"number",
+         "itemwidth":"12em",
+         "visible":true,
+         "value": 5.00
+      },
+      {
+          "widget":"menuitem",
+         "title":"$10",
+         "attributeid":"$10",
+         "itemtype":"number",
+         "itemwidth":"12em",
+         "visible":true,
+         "value": 10.00
+      },
+      {
+          "widget":"menuitem",
+         "title":"$20",
+         "attributeid":"$20",
+         "itemtype":"number",
+         "itemwidth":"12em",
+         "visible":true,
+         "value": 20.00
+      },
+      {
+          "widget":"menuitem",
+         "title":"$50",
+         "attributeid":"$50",
+         "itemtype":"number",
+         "itemwidth":"12em",
+         "visible":true,
+         "value": 50.00
+      },
+      {
+          "widget":"menuitem",
+         "title":"$100",
+         "attributeid":"$100",
+         "itemtype":"number",
+         "itemwidth":"12em",
+         "visible":true,
+         "value": 100.00
+      },
+      {
+          "widget":"menuitem",
+         "title":"$200",
+         "attributeid":"$200",
+         "itemtype":"number",
+         "itemwidth":"12em",
+         "visible":true,
+         "value": 200.00
+      },
+      {
+          "widget":"menuitem",
+         "title":"$500",
+         "attributeid":"$500",
+         "itemtype":"number",
+         "itemwidth":"12em",
+         "visible":true,
+         "value": 500.00
+      }
+   ]
+}

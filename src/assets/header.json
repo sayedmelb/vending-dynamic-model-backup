@@ -1,0 +1,60 @@
+{
+   "widget":"menu",
+   "sitetitle":"Vending Machines",
+   "mainheading":"Angular Dynamic Schema model- demo - syed",
+   "mainsummary":"This is a Vending Machine Application with the following update below",
+  
+   "detailssection":{
+      "heading":"Details",
+      "legend1":"Machines having 80 percent and above stock:",
+      "legend2":"Machines having 60 - 80 percent stock:",
+      "legend3":"Machhines having 20 - 40 percent stock:",
+      "legend4":"Machines having below 20 percent stock:",
+      "summary":"<p>The polygon on the map is indicating a Mall area in google Map.<br> Steps to use the vending machine -><br>1. Choose a machine location from google map <br> 2. Click on Cash / Card payment<br>3. Click on Done/ Authorise to add amount to the machine<br>4. Click on can buttons to dispense <br> 5. Click on Return fund button to return available fund in machine and start process again.<br></p>"
+   },
+   "status":"active",
+   "description":"This is the main menu",
+   "id":801,
+   "settings":{
+      "mainbar":{
+         "backgroundclass":"navbar-red",
+         "setbackground":false,
+         "visible": true
+      },
+      "mainheading":{
+         "visible":true,
+         "colorcode":"",
+         "iscolorcode":true
+      }
+   },
+   
+   "fields":[
+      {
+         "widget":"menuitem",
+         "title":"Home",
+         "attributeid":"home",
+         "itemtype":"text",
+         "linkurl":"#",
+         "itemwidth":"12em",
+         "visible":true
+      },
+      {
+         "widget":"menuitem",
+         "title":"Listings",
+         "attributeid":"listing",
+         "itemtype":"text",
+         "linkurl":"#",
+         "itemwidth":"12em",
+         "visible":true
+      },
+      {
+         "widget":"menuitem",
+         "title":"Admin",
+         "attributeid":"Admin",
+         "itemtype":"text",
+         "linkurl":"#",
+         "itemwidth":"12em",
+         "visible":true
+      }
+   ]
+}

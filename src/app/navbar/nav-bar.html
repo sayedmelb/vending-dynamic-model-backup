@@ -1,0 +1,55 @@
+<div *ngIf="headerInfo?.settings?.mainbar?.visible" class="colx" [ngClass]="{'navbar-red' : headerInfo?.settings?.mainbar?.setbackground === true }">
+	<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color " [containerInside]="true">
+
+		<!-- Navbar brand -->
+		<mdb-navbar-brand><a class="navbar-brand" href="#" (click)="setHome($event,'home')">{{headerInfo.sitetitle}}</a>
+		</mdb-navbar-brand>
+
+		<!-- Collapsible content -->
+		<links>
+
+
+			<ul class="navbar-nav mr-auto">
+				<li *ngFor="let item of headerInfo.fields; let i = index" [attr.data-index]="i" class="nav-item active"
+					(click)="setHome($event,item.attributeid)">
+					<a *ngIf="item.visible === true" class="nav-link waves-light" mdbWavesEffect>{{item.title}}</a>
+
+				</li>
+			</ul>
+
+
+			<ul class="navbar-nav ml-auto nav-flex-icons">
+				<li class="nav-item">
+					<a class="nav-link">
+						<mdb-icon fab icon="twitter"></mdb-icon>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link">
+						<mdb-icon fab icon="google-plus"></mdb-icon>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link">
+						<div class="btn-group" mdbDropdown>
+							<mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+							<div class="dropdown-menu dropdown-menu-right dropdown-primary">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="divider dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</links>
+		<!-- Collapsible content -->
+
+	</mdb-navbar>
+
+</div>
+
+
+<!--/.Navbar-->

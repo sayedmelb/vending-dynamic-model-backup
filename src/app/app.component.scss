@@ -1,0 +1,162 @@
+.header{
+    color: red;
+}
+
+
+.mapsize {
+    height: 600px;
+    width: 100%;
+}
+.custom-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:lightgreen;
+    border: 2px solid white;
+    color:white;
+    font-size:20px;
+    text-align:center;
+  }
+  .mapSearch {
+    margin-top: 5px;
+    //position: absolute;
+    z-index: 9;
+    margin-left: 2px;
+    height: 40px;
+    width: 220px;
+    padding-left: 5px;
+    border-style: none;
+    border-radius: 3px;
+    border-bottom-style: outset;
+    border-bottom-width: 0.35px;
+    border-color: green;
+    background-color: lightsteelblue;
+  }
+  .btn-gap {
+      padding-left: 4px;
+      margin-top: -2px;
+
+  }
+  .light-shade {
+      background-color: lightgray;
+      padding: 0.3rem;
+  }
+  .map-shade {
+      background-color: lightcyan;
+  }
+
+  .vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.info-container {
+    padding: 2px;
+    margin: 1px;
+    border: 1px solid greenyellow;
+    background-color: lightcyan;
+}
+.info-container-cash {
+    padding: 2px;
+    margin: 1px;
+    border: 1px solid greenyellow;
+    background-color: #afca83;
+}
+.info-container-card {
+    padding: 2px;
+    margin: 1px;
+    border: 1px solid greenyellow;
+    background-color: #8cca83;
+}
+.info-message {
+    padding: 2px;
+    margin: 1px;
+    border: 1px solid greenyellow;
+    color: white;
+    background-color: #DE4A43;
+
+}
+
+.info-message {
+    padding: 2px;
+    margin: 1px;
+    border: 1px solid greenyellow;
+    color: white;
+    background-color: #DE4A43;
+
+}
+.info-machine {
+    padding: 2px;
+    margin: 1px;
+    border: 1px solid red;
+    color: white;
+    background-color: #c3cd63;  
+}
+
+.info-message-success {
+    padding: 2px;
+    margin: 1px;
+    border: 1px solid greenyellow;
+    color: white;
+    background-color: #5443de;
+
+}
+
+.machine-section {
+    background-color: white;
+    border: 1px solid green;
+
+}
+.light-border-top {
+    border-top: 1px solid #ca83bc;
+}
+
+.dv-button {
+    border: 1px solid #de4389;
+    cursor: pointer;
+    margin: 1px;
+    text-align: center;
+}
+.dv-amount{
+    border: 1px solid #de9743;
+    background-color: #89de43;
+    margin: 1px; 
+}
+
+.dv-amount-fund{
+    border: 1px solid #de9743;
+    background-color: #43cdde;
+    margin: 1px; 
+}
+
+.pad-right {
+    padding-right: 2px;
+    margin-right: 3px;
+}
+.img-align {
+    width: 20rem;
+    height: 20rem;
+    //margin: auto;    
+    //display: block;
+}
+
+.dv-center {
+    width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-product {
+    padding: 3px;
+}
+.hide {
+    display: none;;
+}
+
+
+
+ 
