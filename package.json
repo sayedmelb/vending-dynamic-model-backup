@@ -6,7 +6,7 @@
     "rxjs": "6.4.0",
     "tslib": "1.11.1",
     "jquery": "3.4.1",
-    "lodash": "4.17.15",
+    "lodash": "4.17.21",
     "zone.js": "0.9.1",
     "@ngui/map": "0.30.3",
     "bootstrap": "4.4.1",
